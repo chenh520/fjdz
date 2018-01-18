@@ -14,9 +14,12 @@
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/bj.js"></script>
 <script type="text/javascript" src="js/fj.js"></script>
-<script type="text/javascript" src="js/zd.js"></script>
+<script type="text/javascript" src="js/diji.js"></script>
 <script type="text/javascript">
 	a.start()
 	new Fj().start()
-	new Zd()
+	setInterval(function(){
+		new Diji().fall()
+//		new Diji().sjfj()
+	},1000)
 </script>
