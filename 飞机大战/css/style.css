@@ -1,0 +1,32 @@
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#box {
+	width: 100%;
+	height: 100vh;
+	background: url(../img/bg.jpg);
+	background-size: 100%;
+	background-position-y: 0%;  /* 先将图片挪动到顶部，以便于能够往下落 */
+}
+.bod2{
+	width: 100px;
+	height: 100px;
+	background: url(../img/me.png);
+	background-size: 100%;
+	position: absolute;
+	left:47%;
+	bottom: 0;
+}
+.bod3{
+	width: 5px;
+	height: 20px;
+	background: red;
+	background-size: 100%;
+	position: absolute;
+	left:50%;
+	bottom: 100px;
+}
