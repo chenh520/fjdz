@@ -2,7 +2,7 @@
 <html id="bos">
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>飞机大战</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
 	<body>
@@ -12,14 +12,35 @@
 	</body>
 </html>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/zd.js"></script>
 <script type="text/javascript" src="js/bj.js"></script>
 <script type="text/javascript" src="js/fj.js"></script>
 <script type="text/javascript" src="js/diji.js"></script>
+<script type="text/javascript" src="js/SmallEnemy.js"></script>
+<script type="text/javascript" src="js/MidEnemy.js"></script>
+<script type="text/javascript" src="js/BigEnemy.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/Touch.js"></script>
+<script type="text/javascript" src="js/jfq.js"></script>
+<script type="text/javascript" src="js/fjtouch.js" ></script>
 <script type="text/javascript">
 	a.start()
 	new Fj().start()
-	setInterval(function(){
-		new Diji().fall()
-//		new Diji().sjfj()
+		setInterval(function(){
+			var a=Math.random()
+//			console.log(a)
+			if(a<0.2){
+				new BigEnemy().move()
+			}
+			if(a<0.5){
+				new SmallEnemy().move()
+			}
+			if(a<0.9){
+				new MidEnemy().move()
+			}
 	},1000)
+	tE.touchListen()
+	new Jfb()
+	fjt.touchListen()
+	
 </script>

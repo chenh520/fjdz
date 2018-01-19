@@ -33,9 +33,53 @@ body{
 	bottom: 100px;
 }
 .bod4{
-	/*width: 165px;
-	height: 256px;*/
+	width: 165px;
+	height: 256px;
 	/*background: red;*/
 	background-size: 100%;
 	position: absolute;
 }
+/* 大飞机 样式 */
+.big-enemy {
+	width: 165px;
+	height: 256px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/plain3.png);
+}
+
+
+
+/* 中飞机 样式 */
+.mid-enemy {
+	width: 70px;
+	height: 92px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/plain2.png);
+}
+
+
+/* 小飞机 样式 */
+.small-enemy {
+	width: 59px;
+	height: 36px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*margin-left: -49px;*/
+	background: url(../img/plain1.png);
+}
+.jfb{
+	width: 150px;
+	height: 40px;
+	background: #666666;
+	position: fixed;left:90%;top:0;
+	text-align: center;
+	font: 15px/40px "微软雅黑";
+}
+

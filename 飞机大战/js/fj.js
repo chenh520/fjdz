@@ -63,26 +63,31 @@ Fj.prototype.move = function(x, y) {
 	})
 	
 }
-function Zd(){
-	this.ele=$("<div></div>")
-	this.ele.addClass("bod3")
-	this.ele.appendTo("#box")
-	this.ele.css({
-		left:parseInt($(".bod2").css("left"))+50,
-		top:parseInt($(".bod2").css("top"))-18
-	})
-}
-Zd.prototype.move=function(){
-	this.ele.animate({top:0},1000,function(){
-		this.remove();
-	})
-}
+
 Fj.prototype.shoot=function(){
 	setInterval(function(){
 		new Zd().move()
-	},100)
+	},300)
 }
 // 方法3：  停止拖拽
 Fj.prototype.stop = function() {
 	$(document).off("mouseup mousemove")
 }
+Fj.prototype.booom=function(){
+	var self=this
+	var arr=[
+		"url(me_die1.png)",
+		"url(me_die2.png)",
+		"url(me_die3.png)",
+		"url(me_die4.png)"
+	]
+	var i=0
+	self.ele.stop()
+	var timer=setInterval(function(){
+		self.ele.css({"background":arr[i++]})
+		if(i>arr.length){
+			alert("GAME OVER")
+		}
+	},100)
+}
+
