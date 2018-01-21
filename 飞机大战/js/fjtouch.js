@@ -1,17 +1,19 @@
 var fjt={
+	
 	isTouchEnemy:function(){
+
 		var enemys=a.enemys;
-		var fj=$(".bod2")
+		
 			for(var j in enemys){
 				if (j=="len") {
 					continue
 				} 
 				var e=enemys[j]
-			if(isTouch(e.ele,fj )){
-				fj.booom()
+			if(isTouch(e.ele,fj.ele )){
+						 fj.booom()
 				}
 			}	
-		}
+	},
 	
 	touchListen:function() {  
 		var self = this
@@ -20,5 +22,12 @@ var fjt={
 		}, 30)
 		
 	}
-}
 
+}
+//function Bao(){
+//	Fj.all(this)
+//	Bao.prototype={}
+//	for(var k in Fj.prototype){
+//		Bao.prototype[k]=Fj.prototype[k]
+//	}
+//}

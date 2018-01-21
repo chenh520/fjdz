@@ -65,9 +65,30 @@ Fj.prototype.move = function(x, y) {
 }
 
 Fj.prototype.shoot=function(){
-	setInterval(function(){
-		new Zd().move()
-	},300)
+//	var timers
+//	var timers=setInterval(function(){
+//			if(Fj.ele){
+//				
+//				clearInterval(timers)
+//				
+//			}else{
+				var timers=setInterval(function(){
+					
+					if(fj.ele){
+					  new Zd().move();	
+//					  console.log(fj.ele)
+					}else{
+						console.log("1111111")
+						clearInterval(timers)
+					}
+					
+					},300)
+//			}
+			
+//		},300)
+//			var timers=setInterval(function(){
+//				new Zd().si()
+//			},300)
 }
 // 方法3：  停止拖拽
 Fj.prototype.stop = function() {
@@ -76,18 +97,23 @@ Fj.prototype.stop = function() {
 Fj.prototype.booom=function(){
 	var self=this
 	var arr=[
-		"url(me_die1.png)",
-		"url(me_die2.png)",
-		"url(me_die3.png)",
-		"url(me_die4.png)"
+		"url(img/me_die1.png)",
+		"url(img/me_die2.png)",
+		"url(img/me_die3.png)",
+		"url(img/me_die4.png)"
 	]
 	var i=0
 	self.ele.stop()
 	var timer=setInterval(function(){
 		self.ele.css({"background":arr[i++]})
 		if(i>arr.length){
-			alert("GAME OVER")
+			clearInterval(timer)
+			self.ele.remove()
+//			console.log(self.ele)
+		
+//			alert("GAME OVER")
 		}
 	},100)
+	delete a.bullets[this.id]
 }
 

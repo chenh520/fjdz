@@ -31,7 +31,16 @@ Zd.prototype.boom=function(){
 		if(i>arr.length){
 			clearInterval(timer)
 			self.ele.remove()
+			
 		}
 	},100)
 	delete a.bullets[this.id]
 }
+//Zd.prototype.si=function(){
+//	var self=this
+//	if(Fj.ele){
+//		self.move()
+//	}else{
+//		self.ele.remove()
+//	}
+//}
