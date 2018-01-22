@@ -5,6 +5,7 @@ function Fj(){
 	this.ele.addClass("bod2")
 	this.ele.appendTo("#box")
 	this.shoot()
+	this.abc=true
 }
 Fj.prototype.start=function(){
 	var aa=this
@@ -66,26 +67,17 @@ Fj.prototype.move = function(x, y) {
 
 Fj.prototype.shoot=function(){
 //	var timers
-//	var timers=setInterval(function(){
-//			if(Fj.ele){
-//				
-//				clearInterval(timers)
-//				
-//			}else{
-				var timers=setInterval(function(){
+		var timers=setInterval(function(){			
+			if(fj.abc){
+			  new Zd().move();	
+					 
+			}else{
+//				console.log("1111111")
+				clearInterval(timers)
+			}
 					
-					if(fj.ele){
-					  new Zd().move();	
-//					  console.log(fj.ele)
-					}else{
-						console.log("1111111")
-						clearInterval(timers)
-					}
-					
-					},300)
-//			}
-			
-//		},300)
+			},300)
+		
 //			var timers=setInterval(function(){
 //				new Zd().si()
 //			},300)
@@ -109,9 +101,11 @@ Fj.prototype.booom=function(){
 		if(i>arr.length){
 			clearInterval(timer)
 			self.ele.remove()
+			self.abc=null
+//			alert("GAME OVER")
 //			console.log(self.ele)
 		
-//			alert("GAME OVER")
+//			
 		}
 	},100)
 	delete a.bullets[this.id]
